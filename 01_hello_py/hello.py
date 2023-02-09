@@ -3,7 +3,7 @@ print('Hello World!')
 first_name = input('Type your name: ')
 last_name = input('Type your surname: ')
 name = first_name + " " + last_name
-print("{}".format(name) + " have a great day! ;)")
+print("{}".format(name) + ", have a great day! ;)")
 
 # TODA EXPRESSÃO TEM UM VALOR
 print(type(1))
