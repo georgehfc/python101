@@ -1,6 +1,6 @@
 # SCRIPT THAT WON'T DISMISS UNTIL LETTER IS TYPED
 # PRACTICING THE WHILE
-# MADE IN CLASS 10Fev
+# MADE IN CLASS 9Fev
 print("### 🔤 FIND THE LETTER 🔤 ###")
 letter = input("Input a letter: ")
 
