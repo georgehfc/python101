@@ -10,12 +10,12 @@ control = 's'
 
 while control.upper() == 'S' or control.upper() == 'SIM':
     product_name = input("Escreva o nome do produto: ")
-    product_price = int(input("Qual o preço unitário de {}? ".format(product_name)))
+    product_price = float(input("Qual o preço unitário de {}? ".format(product_name)))
     product_amount = int(input("Quantos {} comprados? ".format(product_name)))
     product = {
-        "Name": product_name,
-        "Price": product_price,
-        "Quantity": product_amount
+        "Nome": product_name,
+        "Preço": product_price,
+        "Quantidade": product_amount
     }
     products.append(product)
     control = input("Mais um produto? (S - Sim ou N - Não) ")
@@ -27,9 +27,9 @@ total = 0
 for unique_product in products:
     for key, value in unique_product.items():           # .items() IS BUILT-IN
         print(f"{key}: {value}")
-        product_subtotal = unique_product["Price"] * unique_product["Quantity"]
+        product_subtotal = unique_product["Preço"] * unique_product["Quantidade"]
     print(f"Subtotal: {product_subtotal}")
     total = total + product_subtotal
     print("*" * 10)
 
-print(f"TOTAL: {total}")
+print(f"TOTAL: R${total}")
