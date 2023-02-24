@@ -1,5 +1,6 @@
+# FEITO PELO PROFESSOR
 # data_nascimento é opcional
-def ficha_cadastro(nome, sobrenome, cep, data_nascimento=None):
+def ficha_cadastro(nome, sobrenome, cep, data_nascimento = None):
     return {
         "nome": nome,
         "sobrenome": sobrenome,
@@ -15,9 +16,9 @@ def obter_valor(nome_campo):
         valor_campo = input(f"Entre com seu {nome_campo}: ")
     return valor_campo
 
-
+# PARÊNTESIS NÃO OBRIGATÓRIO
 def mostrar_menu():
-    texto_menu = "Digite S para SAIR, \nP para mostrar todos os cadastros \nou qualquer outra tecla para cadastrar uma nova gente: "
+    texto_menu = "Digite S para SAIR, \nP para mostrar todos os cadastros\nou qualquer outra tecla para cadastrar uma nova gente: "
     return texto_menu
 
 
@@ -39,7 +40,7 @@ while continuar != "S" and continuar != 's':
         sobrenome_pessoa = obter_valor("Sobrenome")
         cep_residencia = obter_valor("Cep")
 
-        data_nascimento = input("Entre com sua data de nascimento: ")
+        data_nascimento = input("Entre com sua Data de Nascimento: ")
         if data_nascimento == "":
             data_nascimento = None
 

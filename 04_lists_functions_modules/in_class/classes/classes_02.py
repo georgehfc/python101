@@ -1,3 +1,4 @@
+# FEITO PELO PROFESSOR
 # strings sao objetos do tipo 'str'
 # nome = "Erick"
 # print(nome)

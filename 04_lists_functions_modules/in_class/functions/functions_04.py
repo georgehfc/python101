@@ -1,3 +1,4 @@
+# FEITO PELO PROFESSOR
 # data_nascimento é opcional
 def ficha_cadastro(nome, sobrenome, cep, data_nascimento=None):
     return {

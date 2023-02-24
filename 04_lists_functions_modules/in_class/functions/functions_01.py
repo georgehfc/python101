@@ -1,3 +1,4 @@
+# FEITO PELO PROFESSOR
 # isso eh uma funcao
 def soma(x, y):
     frase = f"O resultado da soma de {x} e {y} é: {x + y}"
