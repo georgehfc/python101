@@ -24,4 +24,4 @@ def dividir(a, b):
 
 # Função de multiplicar
 def multiplicar(a, b):
-          return float(a) * float(b)
+    return float(a) * float(b)
