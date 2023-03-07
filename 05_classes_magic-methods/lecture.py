@@ -1,3 +1,4 @@
+# class ~= struct
 class Pessoa:
     def __init__(self, nome, documento=None):
         self.nome = nome
@@ -29,7 +30,13 @@ class Estudante(Pessoa):
 class Docente(Pessoa):
     def __init__(self, nome, documento=None):
         super().__init__(nome, documento)
-        self.turmas = []
+        self.disciplinas = []
+
+    def adicionar_disciplina(self, disciplina):
+        self.disciplinas.append(disciplina.nome)
+
+    def mostrar_disciplinas(self):
+        return f'Disciplinas: {self.disciplinas}'
 
 class DisciplinaEscolar:
     def __init__(self, nome, pessoa_responsavel):
@@ -48,10 +55,13 @@ class DisciplinaEscolar:
             self.estudantes.append(estudante)
             print(f'Estudante {estudante} cadastrado.')
 
-#
+# 🐓
 estudante = Estudante(nome='George', documento='1234', matricula='83748934')
 print(estudante.mostrar_nome())
-responsavel = Pessoa(nome='Danny Sanchez')
+responsavel = Docente(nome='Danny Sanchez')
 disciplina = DisciplinaEscolar(nome='LP I', pessoa_responsavel=responsavel.nome)
 disciplina.cadastro_estudante(estudante)
 print(disciplina)
+responsavel.adicionar_disciplina(disciplina)
+responsavel.adicionar_disciplina(DisciplinaEscolar(nome='LP II', pessoa_responsavel=responsavel))
+print(responsavel.mostrar_disciplinas())
