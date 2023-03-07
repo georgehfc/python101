@@ -8,7 +8,6 @@ def ficha_cadastro(nome, sobrenome, cep, data_nascimento = None):
         "data_nascimento": data_nascimento
     }
 
-
 def obter_valor(nome_campo):
     valor_campo = input(f"Entre com seu {nome_campo}: ")
     while valor_campo == "":
@@ -21,13 +20,15 @@ def mostrar_menu():
     texto_menu = "Digite S para SAIR, \nP para mostrar todos os cadastros\nou qualquer outra tecla para cadastrar uma nova gente: "
     return texto_menu
 
-
+# PARÊNTESIS NÃO OBRIGATÓRIO
 def obter_escolha():
     escolha = input(mostrar_menu())
     return escolha
 
+# INICIALIZANDO LISTA DE GENTES
 lista_gentes = []
 
+# DISPLAY MENU
 print("## Cadastro de gentes ##")
 continuar = obter_escolha()
 

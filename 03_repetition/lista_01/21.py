@@ -4,6 +4,7 @@
 # animal é, e retorne se é possível hospedar o animal ou não. Se for possível
 # hospedar, guarde o nome do animal e qual animal é. Se não for possível
 # hospedar, diga "não é possível hospedar"
+
 MAX_CACHORRO = 10
 MAX_GATO = 5
 MAX_CAPIVARA = 8

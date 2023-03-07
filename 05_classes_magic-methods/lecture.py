@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__(self, nome, documento = None):
+    def __init__(self, nome, documento=None):
         self.nome = nome
         self.documento = documento
 
@@ -15,19 +15,30 @@ class Pessoa:
         frase = frase + f'{self.nome}!'.upper()
         return frase
 
+# "Estudante estende de Pessoa"
 class Estudante(Pessoa):
     def __init__(self, nome, documento, matricula):
-        super().__init__(nome = nome, documento = documento)
+        # 'SUPER()' CHAMA A CLASSE MÃE
+        super().__init__(nome=nome, documento=documento)
         self.matricula = matricula
 
     def mostrar_nome(self):
         return f'O nome da pessoa estudante é: {self.nome}'
+
+# "Docente é uma especialização de Pessoa"
+class Docente(Pessoa):
+    def __init__(self, nome, documento=None):
+        super().__init__(nome, documento)
+        self.turmas = []
 
 class DisciplinaEscolar:
     def __init__(self, nome, pessoa_responsavel):
         self.nome = nome
         self.pessoa_responsavel = pessoa_responsavel
         self.estudantes = []
+
+    def __str__(self):
+        return f'{self.nome} ({self.pessoa_responsavel})'
 
     def cadastro_estudante(self, estudante):
         print(f'Cadastrando estudante {estudante}...')
@@ -37,13 +48,10 @@ class DisciplinaEscolar:
             self.estudantes.append(estudante)
             print(f'Estudante {estudante} cadastrado.')
 
-# CLASS 'DOCENTE'
-
-# pessoa = Pessoa(nome = 'George', documento = '1234')
-# print(pessoa.mostrar_nome())
-
-# estudante = Estudante(nome = 'Chaves', documento = '1212', matricula = '2525245334')
-# print(estudante.mostrar_nome())
-
-# anonimo = Pessoa(nome = 'Mistério', documento = '666')
-# print(anonimo.mostrar_nome_tres_vezes())
+#
+estudante = Estudante(nome='George', documento='1234', matricula='83748934')
+print(estudante.mostrar_nome())
+responsavel = Pessoa(nome='Danny Sanchez')
+disciplina = DisciplinaEscolar(nome='LP I', pessoa_responsavel=responsavel.nome)
+disciplina.cadastro_estudante(estudante)
+print(disciplina)
