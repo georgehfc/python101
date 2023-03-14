@@ -41,6 +41,7 @@ for i in range(32):
 print("#"*10 + "\nOs 8 grupos foram fechados! 🏟\n" + "#"*10)
 # print(groups)
 
+# https://stackoverflow.com/questions/54249400/python-how-to-group-keys-that-have-the-same-values-in-a-dictionary
 countries = set(groups.values())
 world_cup = {}
 for i in countries:
